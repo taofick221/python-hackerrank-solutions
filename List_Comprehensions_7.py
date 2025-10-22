@@ -46,3 +46,24 @@ print(total_sell)
 
 
 
+
+
+
+# You will get 4 numbers: x, y, z, n.
+
+# Make all possible [i, j, k] combinations where i ≤ x, j ≤ y, k ≤ z.
+
+# Print only those lists where i + j + k is NOT equal to n. 
+
+x = int(input())
+y = int(input())
+z = int(input())
+n = int(input())
+
+result = [[i, j, k] 
+          for i in range(x + 1) 
+          for j in range(y + 1) 
+          for k in range(z + 1) 
+          if i + j + k != n]
+
+print(result)
