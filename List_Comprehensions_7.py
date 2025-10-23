@@ -67,3 +67,20 @@ result = [[i, j, k]
           if i + j + k != n]
 
 print(result)
+
+
+
+
+# Print all numbers from 1 to n, but:
+
+# If a number is even → print "Even" instead of the number
+
+# If a number is odd → print "Odd" instead of the number
+
+n = int(input())  # user input
+
+for i in range(1, n + 1):
+    if i % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
