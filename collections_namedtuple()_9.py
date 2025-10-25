@@ -16,4 +16,29 @@ for _ in range(N):
     total+=int(student1.mark)
 
 print(f"{total:.2f}")
+
+
+
+# Task:
+# You are given student data with Name, ID, CLASS, and MARKS in random column order.
+# Your task is to find the student who scored the highest MARKS and print
+
+from collections import namedtuple
+
+N = int(input())
+fields = input().split()  # column names
+
+Student = namedtuple('Student', fields)
+
+top_name = ""
+top_marks = -1
+
+for _ in range(N):
+    data = input().split()
+    person = Student(*data)
     
+    if int(person.MARKS) > top_marks:
+        top_marks = int(person.MARKS)
+        top_name = person.NAME
+
+print(top_name, top_marks)
